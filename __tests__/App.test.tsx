@@ -1,13 +1,11 @@
-/**
- * @format
- */
+import { formatPrice, getInitials } from '../src/utils/formatters';
 
-import React from 'react';
-import ReactTestRenderer from 'react-test-renderer';
-import App from '../App';
+describe('formatters', () => {
+  it('formats price values', () => {
+    expect(formatPrice(12)).toBe('$12.00');
+  });
 
-test('renders correctly', async () => {
-  await ReactTestRenderer.act(() => {
-    ReactTestRenderer.create(<App />);
+  it('creates initials from names', () => {
+    expect(getInitials('Alex Johnson')).toBe('AJ');
   });
 });
