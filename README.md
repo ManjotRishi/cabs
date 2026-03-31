@@ -104,3 +104,4 @@ curl -X POST http://localhost:5000/api/v1/rides/book \
     "seats": 2
   }'
 ```
+# cabs
